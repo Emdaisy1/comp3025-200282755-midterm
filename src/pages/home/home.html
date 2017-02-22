@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Shopping List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Create Shopping List</h1>
+  <!--<ion-list inset>
+    <label class="item item-input item-stacked-label">
+    <span class="input-label">Item</span>
+    <span class="input-label">Quantity</span>
+      <ion-row>
+          <ion-input type="text" placeholder="Item name"></ion-input>
+          <ion-input type="text" placeholder="Quantity"></ion-input>
+      </ion-row>
+    </label>
+  </ion-list>-->
+  <ion-list>
+    <ion-row>
+      <ion-col>
+      <ion-item-divider>
+        List Name
+      </ion-item-divider>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input type="text" placeholder="Shopping List Name" value="My Shopping List"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-item-divider></ion-item-divider>
+    <ion-row>
+      <ion-col>
+      <ion-item-divider>
+        Enter New List Item
+      </ion-item-divider>
+      </ion-col>
+      <ion-col>
+        <ion-item-divider>
+          Quantity
+        </ion-item-divider>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input name="item1" type="text" placeholder="Item Name"></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-input name="quantity1" type="number" placeholder=0></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input name="item2" type="text" placeholder="Item Name"></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-input name="quantity2" type="number" placeholder=0></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input name="item3" type="text" placeholder="Item Name"></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-input name="quantity3" type="number" placeholder=0></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input name="item4" type="text" placeholder="Item Name"></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-input name="quantity4" type="number" placeholder=0></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input name="item5" type="text" placeholder="Item Name"></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-input name="quantity5" type="number" placeholder=0></ion-input>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+  <button ion-button>
+    Save
+  </button>
+  <button ion-button (click)="clearList()">
+    Cancel
+  </button>
+</ion-content>
