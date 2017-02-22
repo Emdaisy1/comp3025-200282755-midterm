@@ -1,3 +1,8 @@
+<!--File: home.html
+Name: Emma Hilborn - 200282755
+COMP3025 Midterm
+Date: Feb 21, 2017-->
+
 <ion-header>
   <ion-navbar>
     <ion-title>Shopping List</ion-title>
@@ -6,7 +11,7 @@
 
 <ion-content padding>
   <h1>Create Shopping List</h1>
-  <ion-list>
+  <ion-list *ngFor="let list of lists | async">
     <ion-row>
       <ion-col>
       <ion-item-divider>
@@ -16,7 +21,7 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-input type="text" placeholder="Shopping List Name" value="Shopping List"></ion-input>
+        <ion-input type="text" placeholder="Shopping List Name" value={{list.name}}></ion-input>
       </ion-col>
     </ion-row>
     <ion-item-divider></ion-item-divider>
@@ -34,46 +39,46 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-input name="item1" type="text" placeholder="Item Name"></ion-input>
+        <ion-input name="item1" type="text" placeholder="Item Name" value={{list.item1}}></ion-input>
       </ion-col>
       <ion-col>
-        <ion-input name="quantity1" type="number" placeholder=0></ion-input>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-input name="item2" type="text" placeholder="Item Name"></ion-input>
-      </ion-col>
-      <ion-col>
-        <ion-input name="quantity2" type="number" placeholder=0></ion-input>
+        <ion-input name="quantity1" type="number" placeholder=0 value={{list.quantity1}}></ion-input>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-input name="item3" type="text" placeholder="Item Name"></ion-input>
+        <ion-input name="item2" type="text" placeholder="Item Name" value={{list.item2}}></ion-input>
       </ion-col>
       <ion-col>
-        <ion-input name="quantity3" type="number" placeholder=0></ion-input>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-input name="item4" type="text" placeholder="Item Name"></ion-input>
-      </ion-col>
-      <ion-col>
-        <ion-input name="quantity4" type="number" placeholder=0></ion-input>
+        <ion-input name="quantity2" type="number" placeholder=0 value={{list.quantity2}}></ion-input>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-input name="item5" type="text" placeholder="Item Name"></ion-input>
+        <ion-input name="item3" type="text" placeholder="Item Name" value={{list.item3}}></ion-input>
       </ion-col>
       <ion-col>
-        <ion-input name="quantity5" type="number" placeholder=0></ion-input>
+        <ion-input name="quantity3" type="number" placeholder=0 value={{list.quantity3}}></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input name="item4" type="text" placeholder="Item Name" value={{list.item4}}></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-input name="quantity4" type="number" placeholder=0 value={{list.quantity4}}></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input name="item5" type="text" placeholder="Item Name" value={{list.item5}}></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-input name="quantity5" type="number" placeholder=0 value={{list.quantity5}}></ion-input>
       </ion-col>
     </ion-row>
   </ion-list>
-  <button ion-button>
+  <button ion-button (click)="saveList()">
     Save
   </button>
   <button ion-button (click)="cancelList()">

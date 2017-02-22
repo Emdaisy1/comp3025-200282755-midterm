@@ -1,3 +1,8 @@
+// File: app.component.ts
+// Name: Emma Hilborn - 200282755
+// COMP3025 Midterm
+// Date: Feb 21, 2017
+
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
